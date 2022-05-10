@@ -1,9 +1,9 @@
-export default function app() {
+export default function App() {
     return (
         <>
             <h1>this is the mainpage</h1>
             <h3>
-                header componenet need following link:
+                header component need following link:
                 <ul>
                     <li>main page</li>
                     <li>about me</li>
@@ -12,8 +12,8 @@ export default function app() {
                     <li>resume programming</li>
                 </ul>
             </h3>
-            <h3>main page needed</h3>
-            <footer></footer>
+
+            <footer>Le Footer incoming</footer>
         </>
     );
 }

@@ -1,9 +1,16 @@
 import ReactDOM from "react-dom";
-import app from "./app.js";
+import { BrowserRouter, Route } from "react-router-dom";
+import App from "./app";
+ReactDOM.render(<Start />, document.querySelector("main"));
 
-ReactDOM.render(<HelloWorld />, document.querySelector("main"));
-
-function HelloWorld() {
-    return <div>Hello, start page</div>;
-    
+function Start() {
+    return (
+        <>
+            <BrowserRouter>
+                <Route>
+                    <App> </App>
+                </Route>
+            </BrowserRouter>
+        </>
+    );
 }
