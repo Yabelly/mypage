@@ -10,6 +10,7 @@ export default function Header() {
                     <Link to="/about">ABOUT</Link>
                     <Link to="/resume">RESUME</Link>
                     <Link to="blog">BLOG</Link>
+                    <Link to="contact">CONTACT</Link>
                 </div>
             </div>
         </>

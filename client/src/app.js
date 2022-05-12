@@ -3,6 +3,7 @@ import Header from "./header";
 import About from "./about";
 import Resume from "./resume";
 import Blog from "./blog";
+import Contact from "./contact";
 
 export default function App() {
     return (
@@ -10,7 +11,7 @@ export default function App() {
             <div className="App">
                 <BrowserRouter>
                     <Route>
-                        <Header>Header test</Header>
+                        <Header></Header>
                     </Route>
                     <Route path="/about">
                         <About></About>
@@ -21,9 +22,12 @@ export default function App() {
                     <Route path="/blog">
                         <Blog></Blog>
                     </Route>
+                    <Route path="/contact">
+                        <Contact></Contact>
+                    </Route>
                 </BrowserRouter>
 
-                <footer>Le Footer incoming</footer>
+                <footer>Concept Setting</footer>
             </div>
         </>
     );
