@@ -1,5 +1,8 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./header";
+import About from "./about";
+import Resume from "./resume";
+import Blog from "./blog";
 
 export default function App() {
     return (
@@ -7,20 +10,18 @@ export default function App() {
             <div className="App">
                 <BrowserRouter>
                     <Route>
-                        <Header></Header>
+                        <Header>Header test</Header>
+                    </Route>
+                    <Route path="/about">
+                        <About></About>
+                    </Route>
+                    <Route path="/resume">
+                        <Resume></Resume>
+                    </Route>
+                    <Route path="/blog">
+                        <Blog></Blog>
                     </Route>
                 </BrowserRouter>
-                <h1>this is the mainpage</h1>
-                <h3>
-                    header component need following link:
-                    <ul>
-                        <li>main page</li>
-                        <li>about me</li>
-                        <li>resume route setting</li>
-                        <li>blog post</li>
-                        <li>resume programming</li>
-                    </ul>
-                </h3>
 
                 <footer>Le Footer incoming</footer>
             </div>

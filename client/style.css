@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 .App {
     text-align: center;
     min-width: 100%;
@@ -12,7 +11,14 @@
 }
 
 .Header {
+    text-align: center;
     min-width: 100%;
-    min-height: 400px;
+    height: 100px;
     background-color: brown;
+}
+
+#logo {
+    width: 200px;
+    height: 75px;
+    background-color: blue;
 }
