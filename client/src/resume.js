@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import
 export default function Resume() {
     return (
         <>
@@ -6,10 +7,10 @@ export default function Resume() {
             <section className="projects">
                 <ul>
                     <li>
+                        <h4>Social Nework Project</h4>
                         <Link to="https://github.com/Yabelly/socialnetwork">
                             github
                         </Link>
-                        <h4>Social Nework Project</h4>
                         <p>
                             React/Redux, Node.js / Express, AWS, PostgreSQL,
                             Sockets.IO
@@ -17,16 +18,16 @@ export default function Resume() {
                     </li>
                     <li>
                         <h5>estimated finishing date: 21 May 2022</h5>
+
+                        <h4>Penta-Game</h4>
                         <Link to="https://github.com/Yabelly/socialnetwork">
                             github
                         </Link>
-                        <h4>Penta-Game</h4>
                         <p>
                             React/Redux, Node.js / Express, AWS, PostgreSQL,
                             Sockets.IO
                         </p>
                     </li>
-                    <li></li>
                 </ul>
             </section>
             <section className="work-experience">
@@ -34,8 +35,13 @@ export default function Resume() {
                     <li></li>
                 </ul>
             </section>
-            <section className="projects">
-                <p>some shit</p>
+            <section className="skills">
+                <ul>
+                    <li>
+                        <h4>Javascript</h4>
+                        <p></p>
+                    </li>
+                </ul>
             </section>
         </>
     );

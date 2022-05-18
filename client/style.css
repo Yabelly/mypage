@@ -37,3 +37,10 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+.projects {
+    position: absolute;
+    top: 100px;
+}
+About {
+}
