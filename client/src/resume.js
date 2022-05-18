@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
-import
+import Cv from "./cv-data";
 export default function Resume() {
+
+
+
+
+
     return (
         <>
             <h1>resume</h1>
