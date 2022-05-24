@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
-import Cv from "./cv-data";
+import { projects, experience, skills, languages } from "./cv-data";
 export default function Resume() {
-
-
-
-
-
     return (
         <>
             <h1>resume</h1>
@@ -48,6 +43,10 @@ export default function Resume() {
                     </li>
                 </ul>
             </section>
+
+            <secion>
+                
+            </secion>
         </>
     );
 }
