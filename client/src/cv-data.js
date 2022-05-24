@@ -1,12 +1,14 @@
 export const projects = [
     {
-        socialnetwork: {
+        project: {
+            name: "Social Network",
             tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
             github: "https://github.com/Yabelly/socialnetwork",
         },
     },
     {
-        pentagame: {
+        project: {
+            name: "Penta Game",
             tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
             github: "https://github.com/Yabelly/penta-multiplayer",
         },
@@ -14,26 +16,26 @@ export const projects = [
 ];
 export const experience = [
     {
-        routesetter: {
-            time: "2015-present",
-            job: "freelnace routesetter",
-            description:
-                "Tasked with: routesetting, testing, tuning. Hired for: routesetting, chief-routesetting, masterclasses, begginner courses, bouldergym and national team advisor.",
-            location: "Western Europe, North-America",
-        },
-        student: {
-            time: "2010-2015",
-            job: "Student Social Work (unfinished)",
-            description:
-                "Education for allround social worker, focus on addiction and psychiatry and coaching.",
-            location: "Saxion Hogeschool, Enschede",
-        },
-        bartender: {
-            time: "2008-2013",
-            job: "bartender",
-            description:
-                "Making and serving food/drinks, restocking inverntory, hospitality to customers and colleaugues,  cleaning",
-        },
+        time: "2015-present",
+        job: "freelance routesetter",
+        description:
+            "Tasked with: routesetting, testing, tuning. Hired for: routesetting, chief-routesetting, masterclasses, begginner courses, bouldergym and national team advisor.",
+        location: "Western Europe, North-America",
+    },
+    ,
+    {
+        time: "2010-2015",
+        job: "Student Social Work (unfinished)",
+        description:
+            "Education for allround social worker, focus on addiction and psychiatry and coaching.",
+        location: "Saxion Hogeschool, Enschede",
+    },
+
+    {
+        time: "2008-2013",
+        job: "bartender",
+        description:
+            "Making and serving food/drinks, restocking inverntory, hospitality to customers and colleaugues,  cleaning",
     },
 ];
 export const skills = [
@@ -46,4 +48,11 @@ export const skills = [
     },
 ];
 
-export const languages = [{ Dutch: "native", English: "fluent", German: "B2" }];
+export const languages = [
+    {
+        language: "Dutch",
+        level: "native",
+    },
+    { language: "English", level: "fluent" },
+    { language: "German", level: "b2" },
+];

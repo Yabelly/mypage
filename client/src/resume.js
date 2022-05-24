@@ -3,49 +3,48 @@ import { projects, experience, skills, languages } from "./cv-data";
 export default function Resume() {
     return (
         <>
-            <h1>resume</h1>
-            <section className="projects">
-                <ul>
-                    <li>
-                        <h4>Social Nework Project</h4>
-                        <Link to="https://github.com/Yabelly/socialnetwork">
-                            github
-                        </Link>
-                        <p>
-                            React/Redux, Node.js / Express, AWS, PostgreSQL,
-                            Sockets.IO
-                        </p>
-                    </li>
-                    <li>
-                        <h5>estimated finishing date: 21 May 2022</h5>
-
-                        <h4>Penta-Game</h4>
-                        <Link to="https://github.com/Yabelly/socialnetwork">
-                            github
-                        </Link>
-                        <p>
-                            React/Redux, Node.js / Express, AWS, PostgreSQL,
-                            Sockets.IO
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <section className="work-experience">
-                <ul>
-                    <li></li>
-                </ul>
-            </section>
-            <section className="skills">
-                <ul>
-                    <li>
-                        <h4>Javascript</h4>
-                        <p></p>
-                    </li>
-                </ul>
-            </section>
-
-            <secion>
-                
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <secion id="projects">
+                {projects.map((rows, idx) => (
+                    <div className={rows.project} key={idx}>
+                        <h3>{rows.project.name}</h3>
+                        <h4>{rows.project.tech}</h4>
+                        <h4>{rows.project.github}</h4>
+                    </div>
+                ))}
+            </secion>
+            <secion id="experience">
+                {experience.map((rows, idx) => (
+                    <div className={rows.time} key={idx}>
+                        <h3>{rows.job}</h3>
+                        <h4>{rows.time}</h4>
+                        <h4>{rows.description}</h4>
+                    </div>
+                ))}
+            </secion>
+            <secion id="skillset">
+                {skills.map((rows, idx) => (
+                    <div key={idx}>
+                        <h3>{rows.programming}</h3>
+                        <h4>{rows.frameworks}</h4>
+                        <h4>{rows.databases}</h4>
+                        <h4>{rows.tools}</h4>
+                    </div>
+                ))}
+            </secion>
+            <secion id="languages">
+                {languages.map((rows, idx) => (
+                    <div key={idx}>
+                        <h4>{rows.language}</h4>
+                        <h3>{rows.level}</h3>
+                        <br></br>
+                    </div>
+                ))}
             </secion>
         </>
     );
