@@ -38,6 +38,25 @@ footer {
     bottom: 0;
 }
 
-.Resume {
+#content {
+    display: flex;
+    flex-direction: row;
+}
+#sidebar-left {
+    background-color: aquamarine;
+    min-width: 100px;
+    height: 100vh;
+    flex-grow: 1;
+}
+
+#sidebar-right {
+    background-color: lightcoral;
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+#middle {
+    background-color: cadetblue;
+    flex-grow: 4;
     top: 170px;
 }
