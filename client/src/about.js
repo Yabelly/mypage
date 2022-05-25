@@ -5,6 +5,9 @@ export default function About() {
 
             <section>
                 <p>
+                    In 2004 I started climbing in my local gym in the Netherlands, I wasn't very naturally gifted for it but a good hobby nontheless. two years later in 2006 I was invited to set a climbing route. Little did I know this would become my primary hobby above climbing. 
+                </p>
+                <p>
                     Doggo ipsum very taste wow pupper wow such tempt heckin good
                     boys and girls many pats the neighborhood pupper, very taste
                     wow noodle horse heckin good boys and girls very taste wow.
