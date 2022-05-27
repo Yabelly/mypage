@@ -14,6 +14,7 @@
 .Header {
     display: flex;
     flex-direction: column;
+    z-index: 1;
     align-items: center;
     min-width: 100%;
     height: 100px;
@@ -41,6 +42,8 @@ footer {
 #content {
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 100px;
 }
 #sidebar-left {
     background-color: aquamarine;
@@ -59,5 +62,4 @@ footer {
     background-color: cadetblue;
     flex-grow: 2;
     max-width: 700px;
-    top: 170px;
 }

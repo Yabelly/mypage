@@ -2,12 +2,6 @@ import { projects, experience, skills, languages } from "./cv-data";
 export default function Resume() {
     return (
         <>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <secion id="projects">
                 {projects.map((rows, idx) => (
                     <div className={rows.project} key={idx}>
