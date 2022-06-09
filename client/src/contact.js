@@ -4,11 +4,13 @@ export default function Contact() {
     const [message, setMessage] = useState();
 
     function emailInput({ target }) {
-        setEmail(target.email);
+        setEmail(target.value);
+        console.log("email: ", email);
     }
 
     function messageInput({ target }) {
-        setMessage(target.message);
+        setMessage(target.value);
+        console.log("message: ", message);
     }
 
     function sendMessage(e) {
