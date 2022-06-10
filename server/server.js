@@ -13,13 +13,14 @@ app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });
 
-app.post("/api/message", (req, res) => {
+app.post("/api/message", async (req, res) => {
     console.log("req.body: ", req.body);
     const { email, message } = req.body;
-    try { 
-        const { rows } = await db.newMessage(email, message)
-        console.log(": ", );
-        
+    try {
+        const { rows } = await db.newMessage(email, message);
+        console.log("rows: ", rows);
+    } catch {
+        succesStatus: false;
     }
 });
 
