@@ -4,6 +4,7 @@ const compression = require("compression");
 const path = require("path");
 const db = require("./database/db");
 
+
 app.use(compression());
 
 app.use(express.static(path.join(__dirname, "..", "client", "public")));
