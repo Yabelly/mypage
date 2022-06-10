@@ -1,9 +1,12 @@
 import { useState } from "react";
+const secrets = require("/secrets.json");
+
 export default function Contact() {
     const [email, setEmail] = useState();
     const [message, setMessage] = useState();
     const [err, setErr] = useState(false);
     const [send, setSend] = useState(false);
+    var Recaptcha = require("react-recaptcha");
 
     function emailInput({ target }) {
         setEmail(target.value);
@@ -36,7 +39,13 @@ export default function Contact() {
                 }
             });
     }
+    var verifyCallback = function (response) {
+        console.log(response);
+    };
 
+    var callback = function () {
+        console.log("all good");
+    };
     return (
         <>
             <section>
@@ -70,6 +79,12 @@ export default function Contact() {
                 ></input>
                 <br></br>
                 <button onClick={(e) => sendMessage(e)}>send message</button>
+                <Recaptcha
+                    sitekey={secrets.private_key_id}
+                    render="explicit"
+                    verifyCallback={verifyCallback}
+                    onloadCallback={callback}
+                />
             </section>
         </>
     );
