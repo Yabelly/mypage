@@ -65,6 +65,11 @@ footer {
     max-width: 700px;
 }
 
-#projects {
+.resume-item {
     background-color: orange;
+}
+
+#message-field {
+    width: 400px;
+    height: 200px;
 }

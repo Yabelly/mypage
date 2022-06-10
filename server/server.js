@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const compression = require("compression");
 const path = require("path");
+const db = require("./database/db");
 
 app.use(compression());
 
@@ -14,13 +15,13 @@ app.get("*", function (req, res) {
 });
 
 app.post("/api/message", async (req, res) => {
-    console.log("req.body: ", req.body);
     const { email, message } = req.body;
     try {
         const { rows } = await db.newMessage(email, message);
         console.log("rows: ", rows);
+        res.json({ succesStatus: true });
     } catch {
-        succesStatus: false;
+        res.json({ succesStatus: false });
     }
 });
 

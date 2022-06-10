@@ -2,6 +2,8 @@ import { useState } from "react";
 export default function Contact() {
     const [email, setEmail] = useState();
     const [message, setMessage] = useState();
+    const [err, setErr] = useState(false);
+    const [send, setSend] = useState(false);
 
     function emailInput({ target }) {
         setEmail(target.value);
@@ -26,6 +28,12 @@ export default function Contact() {
             .then((resp) => resp.json())
             .then((succesStatus) => {
                 console.log("succesStatus: ", succesStatus);
+                if (succesStatus === false) {
+                    setErr(true);
+                } else {
+                    setSend(true);
+                    setErr(false);
+                }
             });
     }
 
@@ -35,6 +43,17 @@ export default function Contact() {
                 <div>Send message to me</div>
                 <br></br>
                 <div>enter your email so I write you back</div>
+                {err && (
+                    <h2 style={{ color: "red" }}>
+                        Something went wrong, try again
+                    </h2>
+                )}
+                {send && (
+                    <h2 style={{ color: "black" }}>
+                        your message has been send! I will get back to you
+                        shortly
+                    </h2>
+                )}
                 <input
                     name="email"
                     type="email"
@@ -43,11 +62,13 @@ export default function Contact() {
                 ></input>
                 <br></br>
                 <input
+                    id="message-field"
                     name="message"
                     type="text"
                     placeholder="Add your question here"
                     onChange={(e) => messageInput(e)}
                 ></input>
+                <br></br>
                 <button onClick={(e) => sendMessage(e)}>send message</button>
             </section>
         </>
