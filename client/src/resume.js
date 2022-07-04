@@ -2,7 +2,6 @@ import { projects, experience, skills, languages } from "./cv-data";
 export default function Resume() {
     return (
         <>
-            
             <div className="resume-item" id="projects">
                 {projects.map((rows, idx) => (
                     <div className={rows} key={idx}>

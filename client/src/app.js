@@ -8,14 +8,23 @@ import Contact from "./contact";
 export default function App() {
     return (
         <>
-            <div className="App">
+            <div className="App container mx-auto px-4">
                 <BrowserRouter>
                     <Route>
                         <Header></Header>
                     </Route>
-                    <div id="content">
-                        <div id="sidebar-left"></div>
-                        <section id="middle">
+                    <div
+                        id="content"
+                        className="w-full flex flex-col sm:flex-row flex-wrap sm:flex-nowrap py-4 flex-grow"
+                    >
+                        <div
+                            id="sidebar-left"
+                            className="w-fixed w-full flex-shrink flex-grow-0 px-4"
+                        ></div>
+                        <section
+                            id="middle"
+                            className="w-full flex-grow pt-1 px-3"
+                        >
                             <Route path="/about">
                                 <About></About>
                             </Route>
@@ -30,11 +39,14 @@ export default function App() {
                             </Route>
                         </section>
 
-                        <div id="sidebar-right"></div>
+                        <div
+                            id="sidebar-right"
+                            className="w-fixed w-full flex-shrink flex-grow-0 px-2"
+                        ></div>
                     </div>
                 </BrowserRouter>
 
-                <footer>Concept Setting</footer>
+                <footer className="bottom-0">Concept Setting</footer>
             </div>
         </>
     );
