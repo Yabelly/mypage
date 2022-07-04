@@ -4,10 +4,10 @@ export default function Resume() {
         <>
             <div className="resume-item" id="projects">
                 {projects.map((rows, idx) => (
-                    <div className={rows.project} key={idx}>
-                        <h3>{rows.project.name}</h3>
-                        <h4>{rows.project.tech}</h4>
-                        <a href={rows.project.github}>github</a>
+                    <div className={rows} key={idx}>
+                        <h3>{rows.name}</h3>
+                        <h4>{rows.tech}</h4>
+                        <a href={rows.github}>github</a>
                     </div>
                 ))}
             </div>

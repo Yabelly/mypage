@@ -1,17 +1,14 @@
 export const projects = [
     {
-        project: {
-            name: "Social Network",
-            tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
-            github: "https://github.com/Yabelly/socialnetwork",
-        },
+        name: "Social Network",
+        tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
+        github: "https://github.com/Yabelly/socialnetwork",
     },
+
     {
-        project: {
-            name: "Penta Game",
-            tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
-            github: "https://github.com/Yabelly/penta-multiplayer",
-        },
+        name: "Penta Game",
+        tech: "React/Redux, Node.js / Express, AWS, PostgreSQL, Sockets.IO",
+        github: "https://github.com/Yabelly/penta-multiplayer",
     },
 ];
 export const experience = [
