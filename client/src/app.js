@@ -15,7 +15,7 @@ export default function App() {
                     </Route>
                     <div
                         id="content"
-                        className="w-full flex flex-col sm:flex-row flex-wrap sm:flex-nowrap py-4 flex-grow"
+                        className="w-full flex flex-col sm:flex-row flex-wrap sm:flex-nowrap py-4 flex-grow  h-screen"
                     >
                         <div
                             id="sidebar-left"
@@ -46,7 +46,7 @@ export default function App() {
                     </div>
                 </BrowserRouter>
 
-                <footer className="bottom-0">Concept Setting</footer>
+                <footer className="fixed bottom-0">Concept Setting</footer>
             </div>
         </>
     );

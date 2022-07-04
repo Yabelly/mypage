@@ -6,11 +6,31 @@ export default function Header() {
         <>
             <div className="Header">
                 <Logo></Logo>
-                <div className="links">
-                    <Link to="/about">ABOUT</Link>
-                    <Link to="/resume">RESUME</Link>
-                    <Link to="blog">BLOG</Link>
-                    <Link to="contact">CONTACT</Link>
+                <div className="links bg-teal-600">
+                    <Link
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text- mr-4"
+                        to="/about"
+                    >
+                        ABOUT
+                    </Link>
+                    <Link
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        to="/resume"
+                    >
+                        RESUME
+                    </Link>
+                    <Link
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        to="blog"
+                    >
+                        BLOG
+                    </Link>
+                    <Link
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        to="contact"
+                    >
+                        CONTACT
+                    </Link>
                 </div>
             </div>
         </>
