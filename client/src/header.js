@@ -6,7 +6,7 @@ export default function Header() {
         <>
             <div className="Header">
                 <Logo></Logo>
-                <div className="links bg-teal-600">
+                <div className="links bg-teal-600 content-evenly w-full">
                     <Link
                         className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text- mr-4"
                         to="/about"
