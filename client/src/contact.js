@@ -68,14 +68,16 @@ export default function Contact() {
                     type="email"
                     placeholder="example@email.com"
                     onChange={(e) => emailInput(e)}
+                    className="border-2 w-80"
                 ></input>
                 <br></br>
                 <input
                     id="message-field"
                     name="message"
                     type="text"
-                    placeholder="Add your question here"
+                    placeholder="Add your question here, keep it short ;)"
                     onChange={(e) => messageInput(e)}
+                    className="border-2 w-80 h-60"
                 ></input>
                 <br></br>
                 <button onClick={(e) => sendMessage(e)}>send message</button>

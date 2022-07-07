@@ -8,25 +8,25 @@ export default function Header() {
                 <Logo></Logo>
                 <div className="links bg-teal-600 content-evenly w-full">
                     <Link
-                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text- mr-4"
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text- mr-4 w-1/4"
                         to="/about"
                     >
                         ABOUT
                     </Link>
                     <Link
-                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 w-1/4"
                         to="/resume"
                     >
                         RESUME
                     </Link>
                     <Link
-                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 w-1/4"
                         to="blog"
                     >
                         BLOG
                     </Link>
                     <Link
-                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        className="mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 w1/4"
                         to="contact"
                     >
                         CONTACT

@@ -2,11 +2,13 @@ import { projects, experience, skills, languages } from "./cv-data";
 export default function Resume() {
     return (
         <>
-            <div
-                className=" resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
+            <details
+                className="resume-item container bg-gray-200 rounded-xl shadow border p-8 m-10bg-gray-300 open:bg-amber-200 duration-300"
                 id="projects"
             >
-                <div className="text-3xl"> recent projects</div>
+                <summary className="text-3xl bg-inherit px-5 py-3 text-3xl cursor-pointer">
+                    recent projects
+                </summary>
                 <br></br>
                 {projects.map((rows, idx) => (
                     <div className={rows} key={idx}>
@@ -16,13 +18,15 @@ export default function Resume() {
                         <br></br>
                     </div>
                 ))}
-            </div>
+            </details>
             <br></br>
-            <div
-                className="resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
+            <details
+                className="resume-item container bg-gray-200 rounded-xl shadow border p-8 m-10bg-gray-300 open:bg-amber-200 duration-300"
                 id="experience"
             >
-                <div className="text-3xl">experience</div>
+                <summary className=" bg-inherit px-5 py-3 text-3xl cursor-pointer">
+                    experience
+                </summary>
                 <br></br>
                 {experience.map((rows, idx) => (
                     <div className={rows.time} key={idx}>
@@ -34,13 +38,15 @@ export default function Resume() {
                         <br></br>
                     </div>
                 ))}
-            </div>
-            <br></br>
-            <div
+            </details>
+
+            <details
                 className="resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
                 id="skillset"
             >
-                <div className="text-3xl">skills</div>
+                <summary className="bg-inherit px-5 py-3 text-3xl cursor-pointer">
+                    skills
+                </summary>
                 <br></br>
                 {skills.map((rows, idx) => (
                     <div key={idx}>
@@ -57,13 +63,15 @@ export default function Resume() {
                         <h4>{rows.tools}</h4>
                     </div>
                 ))}
-            </div>
-            <br></br>
-            <div
+            </details>
+
+            <details
                 className="resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
                 id="languages"
             >
-                <div className="text-3xl">languages</div>
+                <summary className="bg-inherit px-5 py-3 text-3xl cursor-pointer">
+                    languages
+                </summary>
                 <br></br>
                 {languages.map((rows, idx) => (
                     <div key={idx}>
@@ -72,7 +80,7 @@ export default function Resume() {
                         <br></br>
                     </div>
                 ))}
-            </div>
+            </details>
         </>
     );
 }
