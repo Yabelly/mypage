@@ -3,10 +3,10 @@ export default function Resume() {
     return (
         <>
             <details
-                className="resume-item container bg-gray-200 rounded-xl shadow border p-8 m-10bg-gray-300 open:bg-amber-200 duration-300"
+                className="resume-item container bg-gray-300 rounded-xl my-6"
                 id="projects"
             >
-                <summary className="text-3xl bg-inherit px-5 py-3 text-3xl cursor-pointer">
+                <summary className=" bg-inherit px-5 py-3 text-3xl cursor-pointer">
                     recent projects
                 </summary>
                 <br></br>
@@ -19,9 +19,9 @@ export default function Resume() {
                     </div>
                 ))}
             </details>
-            <br></br>
+
             <details
-                className="resume-item container bg-gray-200 rounded-xl shadow border p-8 m-10bg-gray-300 open:bg-amber-200 duration-300"
+                className="resume-item container bg-gray-300 rounded-xl my-6"
                 id="experience"
             >
                 <summary className=" bg-inherit px-5 py-3 text-3xl cursor-pointer">
@@ -41,7 +41,7 @@ export default function Resume() {
             </details>
 
             <details
-                className="resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
+                className="resume-item container mx-auto bg-gray-300 rounded-xl my-6"
                 id="skillset"
             >
                 <summary className="bg-inherit px-5 py-3 text-3xl cursor-pointer">
@@ -66,7 +66,7 @@ export default function Resume() {
             </details>
 
             <details
-                className="resume-item container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10"
+                className="resume-item container mx-auto bg-gray-300 rounded-xl my-6"
                 id="languages"
             >
                 <summary className="bg-inherit px-5 py-3 text-3xl cursor-pointer">
