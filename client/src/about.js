@@ -1,8 +1,12 @@
+// import
 export default function About() {
     return (
         <>
-            <h1>about me</h1>
-
+            <div className="text-3xl ">about me</div>
+            <img
+                src="/profile-pic.jpg"
+                className="max-w-xs float-left mr-1.5"
+            ></img>
             <section>
                 <p>
                     In 2004 I started climbing in my local gym in the
@@ -16,18 +20,24 @@ export default function About() {
                     Social Work at Saxion applied University in Enschede.
                     Although an interesting study I ended up climbing and
                     routesetting most of the time. In 2011 a bouldering gym
-                    opened in Enschede which took a large portion of my time.{" "}
+                    opened in Enschede which took a large portion of my time.
                     <br></br>
-                    <br></br>Eventually in 2015 I made the decision to go
-                    full-time as a routesetter and joined the Beta-routesetting
-                    collective. From then on I spende the next years being a
-                    freelance routesetter primarily focussed around bouldering.
-                    In these years I ended up setting everything possible in the
-                    space of climbing with the exeption of a Worldcup: circuits,
+                    <br></br>
+                    Eventually in 2015 I made the decision to go full-time as a
+                    routesetter and joined the Beta-routesetting collective.
+                    From then on I spende the next years being a freelance
+                    routesetter primarily focussed around bouldering. In these
+                    years I ended up setting everything possible in the space of
+                    climbing with the exeption of a Worldcup: circuits,
                     competitions from local to international, teamevents,
                     teaching climbing & setting, masterclasses, gymadvising.
                     <br></br>
-                    <br></br>In 2020 I moved to Berlin and lowered the amount of
+                    <br></br>
+                    <img
+                        src="/setting.jpg"
+                        className="max-w-xs float-right ml-1.5"
+                    ></img>
+                    In 2020 I moved to Berlin and lowered the amount of
                     routesetting mostly thanks to the Covid pandamic. In my time
                     off I decided to turn my attention to web development. That
                     resulted with me undergoing a three month full-time bootcamp

@@ -17,13 +17,9 @@ export default function App() {
                         id="content"
                         className="w-full flex flex-col sm:flex-row flex-wrap sm:flex-nowrap py-4 flex-grow  h-screen"
                     >
-                        <div
-                            id="sidebar-left"
-                            className="w-fixed w-full flex-shrink flex-grow-0 px-4"
-                        ></div>
                         <section
                             id="middle"
-                            className="w-full flex-grow pt-1 px-3"
+                            className="w-full flex-grow pt-1 px-3 max-w-4xl my-0 mx-auto flex-col"
                         >
                             <Route path="/about">
                                 <About></About>
@@ -38,11 +34,6 @@ export default function App() {
                                 <Contact></Contact>
                             </Route>
                         </section>
-
-                        <div
-                            id="sidebar-right"
-                            className="w-fixed w-full flex-shrink flex-grow-0 px-2"
-                        ></div>
                     </div>
                 </BrowserRouter>
 
