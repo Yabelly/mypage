@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Recaptcha from "react-recaptcha";
 const secrets = require("/secrets.json");
 
 export default function Contact() {
@@ -6,7 +7,7 @@ export default function Contact() {
     const [message, setMessage] = useState();
     const [err, setErr] = useState(false);
     const [send, setSend] = useState(false);
-    var Recaptcha = require("react-recaptcha");
+    const [verified, setVerified] = useState(false);
 
     function emailInput({ target }) {
         setEmail(target.value);
@@ -20,6 +21,16 @@ export default function Contact() {
 
     function sendMessage(e) {
         e.preventDefault();
+
+        if (verified === true) {
+            alert(
+                "Message send, I will be in contact with you as soon as I can"
+            );
+        } else {
+            alert(
+                "Your message has not been send, you have not clicked the verification button "
+            );
+        }
 
         fetch("/api/message", {
             method: "POST",
@@ -39,19 +50,22 @@ export default function Contact() {
                 }
             });
     }
-    var verifyCallback = function (response) {
-        console.log(response);
+
+    var recaptchaLoaded = function () {
+        console.log("reCaptcha is loaded");
     };
 
-    var callback = function () {
-        console.log("all good");
+    var verifyCallback = function (response) {
+        if (response) {
+            setVerified(true);
+        } else setErr(true);
     };
     return (
         <>
             <section>
                 <div>Send message to me</div>
                 <br></br>
-                <div>enter your email so I write you back</div>
+                <div>enter your email so I can write you back</div>
                 {err && (
                     <h2 style={{ color: "red" }}>
                         Something went wrong, try again
@@ -80,13 +94,19 @@ export default function Contact() {
                     className="border-2 w-80 h-60"
                 ></input>
                 <br></br>
-                <button onClick={(e) => sendMessage(e)}>send message</button>
+
                 <Recaptcha
-                    sitekey={secrets.private_key_id}
+                    sitekey={secrets.new_site_key} // for testing on localhost use: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
                     render="explicit"
                     verifyCallback={verifyCallback}
-                    onloadCallback={callback}
+                    onloadCallback={() => recaptchaLoaded}
                 />
+                <button
+                    className="bg-slate-400"
+                    onClick={(e) => sendMessage(e)}
+                >
+                    send message
+                </button>
             </section>
         </>
     );
