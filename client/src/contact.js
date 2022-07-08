@@ -9,14 +9,21 @@ export default function Contact() {
     const [send, setSend] = useState(false);
     const [verified, setVerified] = useState(false);
 
+    //choosing site key for Recaptcha production and development
+    let theSiteKey = "";
+    if (window.location.href.startsWith("http://localhost")) {
+        theSiteKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+    } else {
+        theSiteKey = secrets.new_site_key;
+    }
+    console.log("theSiteKey: ", theSiteKey);
+
     function emailInput({ target }) {
         setEmail(target.value);
-        console.log("email: ", email);
     }
 
     function messageInput({ target }) {
         setMessage(target.value);
-        console.log("message: ", message);
     }
 
     function sendMessage(e) {
@@ -51,15 +58,15 @@ export default function Contact() {
             });
     }
 
-    var recaptchaLoaded = function () {
+    function recaptchaLoaded() {
         console.log("reCaptcha is loaded");
-    };
+    }
 
-    var verifyCallback = function (response) {
+    function verifyCallback(response) {
         if (response) {
             setVerified(true);
         } else setErr(true);
-    };
+    }
     return (
         <>
             <section>
@@ -96,10 +103,10 @@ export default function Contact() {
                 <br></br>
 
                 <Recaptcha
-                    sitekey={secrets.new_site_key} // for testing on localhost use: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+                    sitekey={theSiteKey}
                     render="explicit"
                     verifyCallback={verifyCallback}
-                    onloadCallback={() => recaptchaLoaded}
+                    onloadCallback={recaptchaLoaded}
                 />
                 <button
                     className="bg-slate-400"
