@@ -39,7 +39,7 @@ export const skills = [
     {
         programming: "Javascript ES5 & ES6, HTML, CSS, SQL",
         frameworks:
-            "React.js, Redux, Vue.js, JQuery, Node.js, Express, Sockets.IO, Express-Handlebars, Jest, Supertest, React Testing Library",
+            "React.js, Redux, Vue.js, JQuery, Node.js, Express, Sockets.IO, TailwindCSS, Express-Handlebars, Jest, Supertest, React Testing Library",
         databases: "PostgreSQL, NoSQL",
         tools: "Git, Github",
     },
