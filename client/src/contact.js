@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Recaptcha from "react-recaptcha";
-const secrets = require("/secrets.json");
 
 export default function Contact() {
     const [email, setEmail] = useState();
@@ -9,14 +8,19 @@ export default function Contact() {
     const [send, setSend] = useState(false);
     const [verified, setVerified] = useState(false);
 
-    //choosing site key for Recaptcha production and development
-    let theSiteKey = "";
-    if (window.location.href.startsWith("http://localhost")) {
-        theSiteKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+    //secret from Heroku config vars below
+    let sessionSecret;
+
+    if (process.env.NODE_ENV == "production") {
+        sessionSecret = process.env.SESSION_SECRET;
     } else {
-        theSiteKey = secrets.new_site_key;
+        //test key for production, doesn't work when live
+        sessionSecret = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
     }
-    console.log("theSiteKey: ", theSiteKey);
+
+    //secret from Heroku config vars above
+
+    //choosing site key for Recaptcha production and development
 
     function emailInput({ target }) {
         setEmail(target.value);
@@ -103,7 +107,7 @@ export default function Contact() {
                 <br></br>
 
                 <Recaptcha
-                    sitekey={theSiteKey}
+                    sitekey={sessionSecret}
                     render="explicit"
                     verifyCallback={verifyCallback}
                     onloadCallback={recaptchaLoaded}

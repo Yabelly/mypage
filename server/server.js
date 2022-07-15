@@ -13,14 +13,6 @@ app.use(express.static(path.join(__dirname, "..", "client", "public")));
 
 app.use(express.json());
 
-let sessionSecret;
-
-if (process.env.NODE_ENV == "production") {
-    sessionSecret = process.env.SESSION_SECRET;
-} else {
-    sessionSecret = require("./secrets").SESSION_SECRET;
-}
-
 if (process.env.NODE_ENV == "production") {
     app.use((req, res, next) => {
         if (req.headers["x-forwarded-proto"].startsWith("https")) {
